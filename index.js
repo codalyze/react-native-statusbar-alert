@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   View
 } from 'react-native'
+import {FONT} from '../../app/utils/globalStyles'
 
 class StatusBarAlert extends Component {
 
@@ -139,7 +140,7 @@ class StatusBarAlert extends Component {
           activeOpacity={ACTIVE_OPACITY}
         >
           <Animated.Text
-            style={[styles.text, {
+            style={[FONT.SF_REGULAR, styles.text, {
               color: this.props.color || styles.text.color,
               opacity: this.props.pulse === 'text' ? this.state.pulse : 1
             }]}
@@ -172,7 +173,7 @@ const styles = {
   },
   text: {
     height: STATUS_BAR_HEIGHT,
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '400',
     lineHeight: 15,
     textAlign: 'center',
